@@ -2,6 +2,12 @@
 
 此專案是拿來練習用的
 
+程式語言
+java
+
+資料庫
+
+
 框架
 spring mvc + 
 Hibernate
