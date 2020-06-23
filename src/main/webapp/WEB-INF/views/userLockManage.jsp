@@ -8,7 +8,6 @@
 </head>
 <body>
 <%@ include file="includeTop.jsp" %>
-alert(${context})
 <form action="<c:url value="/forum/userLockManage.html"/>"  method="post" >
 <table border="1px" width="100%">
 	<tr>

@@ -55,14 +55,11 @@
 			        <input type="checkbox" onclick="switchSelectBox()"/>
 			     </td>
 			   </c:if>
-				<td width="50%">
+				<td width="55%">
 					標題
 				</td>
-				<td width="10%">
+				<td width="15%">
 					發表人
-				</td>
-				<td width="10%">
-					回覆數
 				</td>
 				<td width="15%">
 					發表時間
@@ -88,11 +85,6 @@
 					</td>
 					<td>
 						${topic.user.userName}
-						<br>
-						<br>
-					</td>
-					<td>
-						${topic.replies}
 						<br>
 						<br>
 					</td>

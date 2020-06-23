@@ -1,8 +1,12 @@
 package indi.brian.project.service;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -60,7 +64,7 @@ public class UserService {
 		userDao.update(user);
 	}
 	
-	public User getUserByUserName(String userName){
+	public User getUserByUserName(String userName){		
         return userDao.getUserByUserName(userName);
     }
 	

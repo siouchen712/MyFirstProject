@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import indi.brian.project.domain.Board;
 import indi.brian.project.domain.LoginLog;
 
-@Repository("boardDao")
+@Repository
 public class BoardDao extends BaseDao<Board> {
 	private static final String GET_BOARD_NUM = "select count(b.boardId) from Board b";
 

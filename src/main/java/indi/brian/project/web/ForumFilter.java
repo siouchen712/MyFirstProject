@@ -24,7 +24,7 @@ public class ForumFilter implements Filter {
 	 * 不須登入即可查看的頁面
 	 */
 	private static final String[] INNEHERENT_ESCAPE_URIS = { "/index.jsp", "/index.html", "/login.jsp",
-			"/login/doLogin.html", "/register.jsp", "/register.html", "/board/listBoardTopics-",
+			"/login/doLogin.html", "/register.jsp", "/register/doRegister.html", "/board/listBoardTopics-",
 			"/board/listTopicPosts-" };
 
 	@Override
@@ -39,12 +39,7 @@ public class ForumFilter implements Filter {
 			User user = getSessionUser(httpRequest);
 
 			if (user == null && !isURILogin(httpRequest.getRequestURI(), httpRequest)) {
-				String toUrl = httpRequest.getRequestURL().toString();
-				if (!StringUtils.isEmpty(httpRequest.getQueryString())) {
-					toUrl += "?" + httpRequest.getQueryString();
-				}
-				httpRequest.getSession().setAttribute(CommonConstant.LOGIN_TO_URL, toUrl);
-				httpRequest.getRequestDispatcher("/login.jsp").forward(request, response);
+				httpResponse.sendRedirect("/project/login.jsp");
 				return;
 			}
 			chain.doFilter(request, response);
