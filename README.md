@@ -3,7 +3,7 @@
 此專案是拿來練習用的
 
 框架
-spring mvc
+spring mvc + 
 Hibernate
 
 其餘技術
