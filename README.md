@@ -6,7 +6,7 @@
 java
 
 資料庫
-
+mySql
 
 框架
 spring mvc + 
